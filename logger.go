@@ -11,7 +11,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/mattn/go-isatty"
+	"github.com/zhangdapeng520/zdpgo_gin/go-isatty"
 )
 
 type consoleColorModeValue int

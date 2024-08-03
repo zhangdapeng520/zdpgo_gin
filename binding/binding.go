@@ -79,7 +79,6 @@ var (
 	Query         Binding     = queryBinding{}
 	FormPost      Binding     = formPostBinding{}
 	FormMultipart Binding     = formMultipartBinding{}
-	MsgPack       BindingBody = msgpackBinding{}
 	YAML          BindingBody = yamlBinding{}
 	Uri           BindingUri  = uriBinding{}
 	Header        Binding     = headerBinding{}
@@ -98,8 +97,6 @@ func Default(method, contentType string) Binding {
 		return JSON
 	case MIMEXML, MIMEXML2:
 		return XML
-	case MIMEMSGPACK, MIMEMSGPACK2:
-		return MsgPack
 	case MIMEYAML, MIMEYAML2:
 		return YAML
 	case MIMETOML:

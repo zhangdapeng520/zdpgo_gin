@@ -7,7 +7,7 @@ package render
 import (
 	"net/http"
 
-	"gopkg.in/yaml.v3"
+	"github.com/zhangdapeng520/zdpgo_yaml"
 )
 
 // YAML contains the given interface object.
@@ -21,7 +21,7 @@ var yamlContentType = []string{"application/yaml; charset=utf-8"}
 func (r YAML) Render(w http.ResponseWriter) error {
 	r.WriteContentType(w)
 
-	bytes, err := yaml.Marshal(r.Data)
+	bytes, err := zdpgo_yaml.Marshal(r.Data)
 	if err != nil {
 		return err
 	}

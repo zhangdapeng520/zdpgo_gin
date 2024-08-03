@@ -9,7 +9,7 @@ import (
 	"io"
 	"net/http"
 
-	"github.com/pelletier/go-toml/v2"
+	"github.com/zhangdapeng520/zdpgo_toml"
 )
 
 type tomlBinding struct{}
@@ -27,7 +27,7 @@ func (tomlBinding) BindBody(body []byte, obj any) error {
 }
 
 func decodeToml(r io.Reader, obj any) error {
-	decoder := toml.NewDecoder(r)
+	decoder := zdpgo_toml.NewDecoder(r)
 	if err := decoder.Decode(obj); err != nil {
 		return err
 	}

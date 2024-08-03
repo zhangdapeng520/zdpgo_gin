@@ -10,12 +10,12 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/go-playground/validator/v10"
+	"github.com/zhangdapeng520/zdpgo_validator"
 )
 
 type defaultValidator struct {
 	once     sync.Once
-	validate *validator.Validate
+	validate *zdpgo_validator.Validate
 }
 
 type SliceValidationError []error
@@ -86,7 +86,7 @@ func (v *defaultValidator) validateStruct(obj any) error {
 // Engine returns the underlying validator engine which powers the default
 // Validator instance. This is useful if you want to register custom validations
 // or struct level validations. See validator GoDoc for more info -
-// https://pkg.go.dev/github.com/go-playground/validator/v10
+// https://pkg.go.dev/github.com/zhangdapeng520/zdpgo_validator
 func (v *defaultValidator) Engine() any {
 	v.lazyinit()
 	return v.validate
@@ -94,7 +94,7 @@ func (v *defaultValidator) Engine() any {
 
 func (v *defaultValidator) lazyinit() {
 	v.once.Do(func() {
-		v.validate = validator.New()
+		v.validate = zdpgo_validator.New()
 		v.validate.SetTagName("binding")
 	})
 }

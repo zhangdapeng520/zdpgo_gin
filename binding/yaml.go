@@ -9,7 +9,7 @@ import (
 	"io"
 	"net/http"
 
-	"gopkg.in/yaml.v3"
+	"github.com/zhangdapeng520/zdpgo_yaml"
 )
 
 type yamlBinding struct{}
@@ -27,7 +27,7 @@ func (yamlBinding) BindBody(body []byte, obj any) error {
 }
 
 func decodeYAML(r io.Reader, obj any) error {
-	decoder := yaml.NewDecoder(r)
+	decoder := zdpgo_yaml.NewDecoder(r)
 	if err := decoder.Decode(obj); err != nil {
 		return err
 	}

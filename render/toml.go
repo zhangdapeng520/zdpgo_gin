@@ -7,7 +7,7 @@ package render
 import (
 	"net/http"
 
-	"github.com/pelletier/go-toml/v2"
+	"github.com/zhangdapeng520/zdpgo_toml"
 )
 
 // TOML contains the given interface object.
@@ -21,7 +21,7 @@ var TOMLContentType = []string{"application/toml; charset=utf-8"}
 func (r TOML) Render(w http.ResponseWriter) error {
 	r.WriteContentType(w)
 
-	bytes, err := toml.Marshal(r.Data)
+	bytes, err := zdpgo_toml.Marshal(r.Data)
 	if err != nil {
 		return err
 	}

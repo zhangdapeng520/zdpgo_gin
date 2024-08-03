@@ -19,9 +19,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/gin-contrib/sse"
 	"github.com/zhangdapeng520/zdpgo_gin/binding"
 	"github.com/zhangdapeng520/zdpgo_gin/render"
+	"github.com/zhangdapeng520/zdpgo_gin/sse"
 )
 
 // Content-Type MIME of the most common data formats.

@@ -11,7 +11,9 @@
 [![Release](https://img.shields.io/github/release/gin-gonic/gin.svg?style=flat-square)](https://github.com/zhangdapeng520/zdpgo_gin/releases)
 [![TODOs](https://badgen.net/https/api.tickgit.com/badgen/github.com/zhangdapeng520/zdpgo_gin)](https://www.tickgit.com/browse?repo=github.com/zhangdapeng520/zdpgo_gin)
 
-Gin is a web framework written in [Go](https://go.dev/). It features a martini-like API with performance that is up to 40 times faster thanks to [httprouter](https://github.com/julienschmidt/httprouter). If you need performance and good productivity, you will love Gin.
+Gin is a web framework written in [Go](https://go.dev/). It features a martini-like API with performance that is up to
+40 times faster thanks to [httprouter](https://github.com/julienschmidt/httprouter). If you need performance and good
+productivity, you will love Gin.
 
 **The key features of Gin are:**
 
@@ -25,12 +27,12 @@ Gin is a web framework written in [Go](https://go.dev/). It features a martini-l
 - Rendering built-in
 - Extendable
 
-
 ## Getting started
 
 ### Prerequisites
 
-- **[Go](https://go.dev/)**: any one of the **three latest major** [releases](https://go.dev/doc/devel/release) (we test it with these).
+- **[Go](https://go.dev/)**: any one of the **three latest major** [releases](https://go.dev/doc/devel/release) (we test
+  it with these).
 
 ### Getting Gin
 
@@ -56,19 +58,19 @@ First you need to import Gin package for using Gin, one simplest example likes t
 package main
 
 import (
-  "net/http"
+	"net/http"
 
-  "github.com/zhangdapeng520/zdpgo_gin"
+	"github.com/zhangdapeng520/zdpgo_gin"
 )
 
 func main() {
-  r := gin.Default()
-  r.GET("/ping", func(c *gin.Context) {
-    c.JSON(http.StatusOK, gin.H{
-      "message": "pong",
-    })
-  })
-  r.Run() // listen and serve on 0.0.0.0:8080 (for windows "localhost:8080")
+	r := gin.Default()
+	r.GET("/ping", func(c *gin.Context) {
+		c.JSON(http.StatusOK, gin.H{
+			"message": "pong",
+		})
+	})
+	r.Run() // listen and serve on 0.0.0.0:8080 (for windows "localhost:8080")
 }
 ```
 
@@ -83,12 +85,13 @@ $ go run example.go
 
 #### Quick Start
 
-Learn and practice more examples, please read the [Gin Quick Start](docs/doc.md) which includes API examples and builds tag.
+Learn and practice more examples, please read the [Gin Quick Start](docs/doc.md) which includes API examples and builds
+tag.
 
 #### Examples
 
-A number of ready-to-run examples demonstrating various use cases of Gin on the [Gin examples](https://github.com/gin-gonic/examples) repository.
-
+A number of ready-to-run examples demonstrating various use cases of Gin on
+the [Gin examples](https://github.com/gin-gonic/examples) repository.
 
 ## Documentation
 
@@ -113,10 +116,11 @@ A curated list of awesome Gin framework.
 
 ## Benchmarks
 
-Gin uses a custom version of [HttpRouter](https://github.com/julienschmidt/httprouter), [see all benchmarks details](/BENCHMARKS.md).
+Gin uses a custom version
+of [HttpRouter](https://github.com/julienschmidt/httprouter), [see all benchmarks details](/BENCHMARKS.md).
 
 | Benchmark name                 |       (1) |             (2) |          (3) |             (4) |
-| ------------------------------ | ---------:| ---------------:| ------------:| ---------------:|
+|--------------------------------|----------:|----------------:|-------------:|----------------:|
 | BenchmarkGin_GithubAll         | **43550** | **27364 ns/op** |   **0 B/op** | **0 allocs/op** |
 | BenchmarkAce_GithubAll         |     40543 |     29670 ns/op |       0 B/op |     0 allocs/op |
 | BenchmarkAero_GithubAll        |     57632 |     20648 ns/op |       0 B/op |     0 allocs/op |
@@ -153,11 +157,9 @@ Gin uses a custom version of [HttpRouter](https://github.com/julienschmidt/httpr
 - (3): Heap Memory (B/op), lower is better
 - (4): Average Allocations per Repetition (allocs/op), lower is better
 
-
 ## Middlewares
 
 You can find many useful Gin middlewares at [gin-contrib](https://github.com/gin-contrib).
-
 
 ## Users
 
@@ -170,9 +172,14 @@ Awesome project lists using [Gin](https://github.com/zhangdapeng520/zdpgo_gin) w
 * [picfit](https://github.com/thoas/picfit): An image resizing server written in Go.
 * [dkron](https://github.com/distribworks/dkron): Distributed, fault tolerant job scheduling system.
 
-
 ## Contributing
 
 Gin is the work of hundreds of contributors. We appreciate your help!
 
 Please see [CONTRIBUTING](CONTRIBUTING.md) for details on submitting patches and the contribution workflow.
+
+## 版本
+
+### v0.1.0
+
+- 基于gin框架继续开发
